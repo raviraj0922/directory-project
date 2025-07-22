@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://directory-project-kappa.vercel.app/"
+      "destination": "https://directory-project-eight.vercel.app/api/$1"
     },
     {
       "source": "/(.*)",
