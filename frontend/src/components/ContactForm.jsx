@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../config/api";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -16,7 +16,7 @@ const ContactSection = () => {
     setSuccessMsg("");
 
     try {
-      const res = await axios.post("/api/contact", formData);
+      const res = await api.post("/api/contact", formData);
       setSuccessMsg("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
