@@ -6,7 +6,7 @@ const getApiBaseUrl = () => {
   }
   
   // In production, use the backend URL
-  return import.meta.env.VITE_BACKEND_URL || 'https://your-backend-url.vercel.app';
+  return import.meta.env.VITE_BACKEND_URL || 'https://directory-project-beige.vercel.app';
 };
 
 export const API_BASE_URL = getApiBaseUrl();
@@ -20,5 +20,6 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
 
 export default api; 
